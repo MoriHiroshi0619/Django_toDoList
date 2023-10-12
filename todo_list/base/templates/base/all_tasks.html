@@ -1,0 +1,20 @@
+<h1>Minha Lista de Tarefas</h1>
+<a href="{% url 'task-create' %}">Adicionar Tarefa</a>
+<table>
+    <tr>
+        <th>Tarefa</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    {%for task in tasks%}
+    <tr>
+        <td>{{task.title}}</td>
+        <td><a href="{%url 'task' task.id%}">Conferir</a></td>
+        <td><a href="{%url 'task-update' task.id%}">Editar</a></td>
+        <td><a href="{%url 'task-delete' task.id%}">Apagar</a></td>
+    </tr>
+    {%empty%}
+        <h2>Sem tarefas no Momento</h2>
+    {%endfor%}
+</table>
