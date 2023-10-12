@@ -1,3 +1,6 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
 {% if request.user.is_authenticated %}
     <p>{{request.user}}</p>
     <a href="{% url 'logout' %}">Logout</a>
@@ -8,6 +11,12 @@
 <hr>
 <h1>Minha Lista de Tarefas</h1>
 <a href="{% url 'task-create' %}">Adicionar Tarefa</a>
+
+<form method="get">
+    <input type="text" name="search-area" value="{{search_input}}">
+    <input type="submit" value="Buscar">
+</form>   
+
 <table>
     <tr>
         <th>Tarefa</th>
@@ -26,3 +35,6 @@
         <h2>Sem tarefas no Momento</h2>
     {%endfor%}
 </table>
+
+
+{% endblock content %}
