@@ -1,40 +1,69 @@
-{% extends 'base/main.html' %}
+<!-- {% extends 'base/main.html' %}
 {% block content %}
+ -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/tasks.css' %}">
 
-{% if request.user.is_authenticated %}
-    <p>{{request.user}}</p>
-    <a href="{% url 'logout' %}">Logout</a>
-{% else %}
-    <a href="{% url 'login'%}">Login</a>
-{% endif %}
+<body>
+    <header class="header-container">
+        <h1>Minha Lista de Tarefas</h1>
+        <div class="login-container">
+            {% if request.user.is_authenticated %}
+                <p>{{request.user}}</p>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'login'%}">Login</a>
+            {% endif %}
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="tools-container">
+            <form method="get">
+                <label for="search">Buscar tarefa</label>
+                <input type="text" name="search-area" value="{{search_input}}" id="search">
+                <input type="submit" value="Buscar">
+            </form>
+            <a href="{% url 'task-create' %}">Adicionar Tarefa</a>
+        </div>
+    
+        <div class="ListaTarefa">
+            <h2>Task List</h2>
+            <ul class="task">
+                {% for task in tasks %}
+                <li class="task-item">
+                    <div>{{task.title}}</div>
+                    <div><a href="{%url 'task' task.id%}">Conferir</a></div>
+                    <div><a href="{%url 'task-update' task.id%}">Editar</a></div>
+                    <div><a href="{%url 'task-delete' task.id%}">Apagar</a></div>
+                </li>
+                {% empty %}
+                <li>
+                    <div>No Tasks in the List</div>
+                </li>
+                {% endfor%}
+            </ul>
+        </div>
+    </main>
+</body>
 
-<hr>
-<h1>Minha Lista de Tarefas</h1>
-<a href="{% url 'task-create' %}">Adicionar Tarefa</a>
 
-<form method="get">
-    <input type="text" name="search-area" value="{{search_input}}">
-    <input type="submit" value="Buscar">
-</form>   
-
-<table>
-    <tr>
-        <th>Tarefa</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    {%for task in tasks%}
-    <tr>
-        <td>{{task.title}}</td>
-        <td><a href="{%url 'task' task.id%}">Conferir</a></td>
-        <td><a href="{%url 'task-update' task.id%}">Editar</a></td>
-        <td><a href="{%url 'task-delete' task.id%}">Apagar</a></td>
-    </tr>
-    {%empty%}
-        <h2>Sem tarefas no Momento</h2>
-    {%endfor%}
-</table>
-
-
-{% endblock content %}
+        <!-- <table>
+            <tr>
+                <th>Tarefa</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            {%for task in tasks%}
+            <tr>
+                <td>{{task.title}}</td>
+                <td><a href="{%url 'task' task.id%}">Conferir</a></td>
+                <td><a href="{%url 'task-update' task.id%}">Editar</a></td>
+                <td><a href="{%url 'task-delete' task.id%}">Apagar</a></td>
+            </tr>
+            {%empty%}
+                <h2>Sem tarefas no Momento</h2>
+            {%endfor%}
+        </table> -->
+<!-- {% endblock content %} -->
