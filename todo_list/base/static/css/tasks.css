@@ -42,6 +42,7 @@ a{
 .header-container{
     background-color: var(--cor01);
     height: 80px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,6 +91,7 @@ a{
 }
 
 .tools-container{
+    width: 100%;
     background-color: var(--cor03);
     display: flex;
     justify-content: space-evenly;
@@ -131,6 +133,7 @@ a{
 }
 
 .ListaTarefa{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,7 +146,8 @@ a{
 }
 
 .tasks{
-    max-width: 400px;
+    max-width: 80vw;
+    min-width: 400px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -193,6 +197,11 @@ a{
     background-color: var(--cor08);
 }
 
+@media (max-width: 400px){
+    .tasks{
+        min-width: 90vw;
+    }
+}
 
 
 
