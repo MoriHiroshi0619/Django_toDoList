@@ -1,22 +1,53 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+:root{
+    --cor01: #7A8CBF;
+    --cor02: #B6D0F2;
+    --cor03: #7EBCF2;
+    --cor04: #79F2AE;
+    --cor05: #65BF85;
+    --cor06: #F2E857;
+    --cor07: #F2C84B;
+    --cor08: #F26457;
+    --cor09: #0D0D0D;
+    --corFundo: #d5dfe7;
+    --fontTask: 'Nunito', sans-serif;
+    --fontMain: 'Roboto', sans-serif;
+}
+
 *{
-    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
+    background-color: var(--corFundo);
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    font-family: var(--fontMain);
+}
+
+a{
+    text-decoration: none;
 }
 
 
 .header-container{
+    background-color: var(--cor01);
     height: 80px;
-    background-color: var(--cor04);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 50px;
     font-size: 1.5rem;
-    color: var(--cor02);
+    flex-wrap: wrap;
 }
 
 .header-container > h1{
@@ -24,24 +55,149 @@ body{
 }
 
 .login-container{
+    background-color: var(--cor03);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    border-radius: 15px;
     display: flex;
-    gap: 10px;
     align-items: center;
+}
+
+.login-container p{
+    background-color: var(--cor04);
+    border-radius: 15px;
+    padding: 5px;
+    text-decoration: underline;
+}
+.login-container a{
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.login-container a:hover{
+    transform: scale(0.8);   
+    background-color: var(--cor07); 
+}
+
+.header-container a{
+    padding: 5px;
+    color: var(--cor09);
 }
 
 .main-container{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border: 1px solid green;
+}
+
+.tools-container{
+    background-color: var(--cor03);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.tools-container a{
+    background-color: var(--cor04);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    color: var(--cor09);
+    font-size: 1rem;
+    transition: 1s;
+}
+
+.tools-container a:hover{
+    transform: scale(1.2);
+    background-color: var(--cor05);
+}
+
+.tools-container form{
+    background-color: var(--cor02);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tools-container input{
+    background-color: var(--corFundo);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#submit{
+    background-color: var(--cor04);
 }
 
 .ListaTarefa{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.ListaTarefa h2{
+    padding: 5px;
+}
+
+.tasks{
+    max-width: 400px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: var(--fontTask);
 }
 
 .task-item{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.303);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 1.4rem;
+    flex-wrap: wrap;
 }
+
+.task-buttons{
+    display: flex;
+    gap: 4px;
+}
+
+.task-buttons a{
+    width: 30px;
+    font-size: .9rem;
+    padding: 5px;
+    color: var(--cor09);
+    border-radius: 10px;
+    transition: 0.7s;
+}
+.task-buttons a:hover{
+    transform: scale(1.2);
+    background-color: var(--cor02) !important;
+}
+
+#view{
+    background-color: var(--cor05);
+}
+
+#edit{
+    background-color: var(--cor07);
+}
+
+#delete{
+    background-color: var(--cor08);
+}
+
+
+
+
+
+
+
+
 
