@@ -23,7 +23,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red ;
 }
 
 body{
@@ -65,5 +64,68 @@ header label:hover{
     transform: scale(1.2);
     background-color: var(--cor05);
 }
+
+main{
+    background-color: var(--cor03);
+    width: 100vw;
+    height: 45px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    background-color: var(--cor02);
+    border-radius: 5px;
+}
+
+form input{
+    background-color: var(--corFundo);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#submit{
+    background-color: var(--cor04);
+    transition: 1s;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: var(--cor05);
+}
+main p{
+    font-size: .9rem;
+}
+
+main p a{
+    color: var(--cor09);
+    background-color: var(--cor04);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    text-decoration: none;
+    transition: 1s;
+}
+
+main p a:hover{
+    background-color: var(--cor05);
+}
+
+
+
+
+
+
+
+
 
 
