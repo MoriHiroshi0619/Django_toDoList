@@ -1,13 +1,16 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Login.css' %}">
+
 <body>
     <header>
-        <h1>Login</h1>
-        <h2>My To Do List</h2>
+        <h1>My To Do List</h1>
+        <label for="submit">Login</label>
     </header>
     <main>
         <form method="post">
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="submit">
         </form>
         
         <p>Não tem uma conta? <a href="{%url 'register'%}">Criar Conta</a></p>
