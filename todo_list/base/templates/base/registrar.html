@@ -1,8 +1,17 @@
-<h1>Criar Conta</h1>
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Criar Conta">
-</form>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+<body>
+    <header>
+        <h1>My To Do List</h1>
+        <h2>Create Account</h2>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Criar Conta">
+        </form>
+        <p>Já tem um conta? <a href="{%url 'login'%}">Login</a></p>
+    </main>
+</body>
 
-<p>Já tem um conta? <a href="{%url 'login'%}">Login</a></p>
