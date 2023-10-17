@@ -23,7 +23,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 body{
@@ -34,6 +33,7 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: var(--fontMain);
+    flex-basis: 1;
 }
 
 header{
@@ -50,7 +50,7 @@ header h1{
     font-size: 2rem;
 }
 
-header label{
+header a{
     font-size: 1.5rem;
     padding: 5px;
     background-color: var(--cor04);
@@ -58,84 +58,73 @@ header label{
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
     cursor: pointer;
     transition: 1s;    
+    color: var(--cor09);
+    text-decoration: none;
 }
 
-header label:hover{
+header a:hover{
     transform: scale(1.2);
     background-color: var(--cor05);
 }
 
+
 main{
-    width: 100vw;
     display: flex;
-    gap: 20px;
-    flex-direction: column;
-}
-
-
-form{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    gap: 5px;
-    background-color: var(--cor02);
-    border-radius: 5px;
-
+    flex-grow: 1;
 }
 
-form input{
+main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--cor02);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    padding: 20px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs p{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inputs input, textarea{
     background-color: var(--corFundo);
     border: none;
     border-radius: 5px;
     padding: 5px;
 }
 
+
 #submit{
+    width: 80px;
+    height: 40px;
     background-color: var(--cor04);
     transition: 1s;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
 }
 
 #submit:hover{
     background-color: var(--cor05);
+    transform: scale(1.2);
 }
-main p{
-    font-size: .9rem;
-}
-
-main p a{
-    color: var(--cor09);
-    background-color: var(--cor04);
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
-    text-decoration: none;
-    transition: 1s;
-}
-
-main p a:hover{
-    background-color: var(--cor05);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,7 +1,18 @@
-<h3>Formulário Tarefa</h3>
-<a href="{% url 'tasks'%}">Voltar</a>
-<form action="" method="POST">
-    {%csrf_token%}
-    {{form.as_p}}
-    <input type="submit" value="Salvar">
-</form>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/addTask.css' %}">
+
+<body>
+    <header>
+        <h1>My To Do List</h1>
+        <a href="{% url 'tasks'%}">Back</a>
+    </header>
+    <main>
+        <form method="POST">
+            <div class="inputs">
+                {%csrf_token%}
+                {{form.as_p}}
+            </div>
+            <input type="submit" value="Save" id="submit">
+        </form>
+    </main>
+</body>
