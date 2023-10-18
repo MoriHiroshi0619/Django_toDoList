@@ -7,14 +7,16 @@
         <label for="submit" >Create Account</label>
     </header>
     <main>
-        <form method="post">
-            <div class="input">
-                {% csrf_token %}
-                {{form.as_p}}
-            </div>
-            <input type="submit" value="Create Account" id="submit">
-        </form>
-        <p>Already have an a account? <a href="{%url 'login'%}">Login</a></p>
+        <div class="form-container">
+            <form method="post">
+                <div class="inputs">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Create Account" id="submit">
+                </div>
+            </form>
+            <p>Already have an a account? <a href="{%url 'login'%}">Login</a></p>
+        </div>
     </main>
 </body>
 

@@ -33,6 +33,7 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: var(--fontMain);
+    flex-basis: 1;
 }
 
 header{
@@ -69,22 +70,23 @@ main *{
 }
 
 main{
-    width: 100vw;
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 20px;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border: 1px solid red !important;
 }
 
 
-main form{
+main .form-container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-grow: 1;
+    gap: 20px;
     background-color: var(--cor02);
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
     padding: 20px;
 }
@@ -95,6 +97,7 @@ main form{
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    padding: 15px;
 }
 
 .inputs p{
@@ -112,13 +115,11 @@ main form{
     padding: 5px;
 }
 
-.inputs ul{
+.inputs ul, li{
     list-style: none;
 }
 
 #submit{
-    width: 80px;
-    height: 40px;
     background-color: var(--cor04);
     transition: 1s;
     cursor: pointer;

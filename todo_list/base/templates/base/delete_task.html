@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/addTask.css' %}">
+
 <a href="{% url 'tasks'%}">Voltar</a>
 <form method="post">
     {%csrf_token%}
