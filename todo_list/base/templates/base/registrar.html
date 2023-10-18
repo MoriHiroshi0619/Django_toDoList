@@ -8,8 +8,10 @@
     </header>
     <main>
         <form method="post">
-            {% csrf_token %}
-            {{form.as_p}}
+            <div class="input">
+                {% csrf_token %}
+                {{form.as_p}}
+            </div>
             <input type="submit" value="Create Account" id="submit">
         </form>
         <p>Already have an a account? <a href="{%url 'login'%}">Login</a></p>
