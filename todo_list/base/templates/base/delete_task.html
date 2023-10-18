@@ -1,9 +1,18 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/addTask.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/deleteTask.css' %}">
 
-<a href="{% url 'tasks'%}">Voltar</a>
-<form method="post">
-    {%csrf_token%}
-    <p>Tem certeza que deseja apagar essa tarefa? "{{task.title}}"</p>
-    <input type="submit" value="Apagar">
-</form>
+
+<body>
+    <header>
+        <h1>My To Do List</h1>
+        <a href="{% url 'tasks'%}">Voltar</a>
+    </header>
+    <main>
+        <form method="post">
+            {%csrf_token%}
+            <p>Tem certeza que deseja apagar essa tarefa?</p>
+            <p class="task-title">{{task.title}}</p>
+            <input type="submit" value="Apagar" id="submit">
+        </form>
+    </main>
+</body>

@@ -24,3 +24,94 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--corFundo);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--fontMain);
+    flex-basis: 1;
+}
+
+header{
+    background-color: var(--cor01);
+    padding: 5px 50px;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 2rem;
+}
+
+header a{
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: var(--cor04);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    cursor: pointer;
+    transition: 1s;    
+    color: var(--cor09);
+    text-decoration: none;
+}
+
+header a:hover{
+    transform: scale(1.2);
+    background-color: var(--cor05);
+}
+
+
+main{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--cor02);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    padding: 20px;
+}
+
+.task-title{
+    padding: 10px;
+    background-color: var(--corFundo);
+    font-family: var(--fontTask);
+    font-size: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    transition: 1s;
+}
+
+.task-title:hover{
+    transform: scale(1.4);
+}
+
+#submit{
+    width: 80px;
+    height: 40px;
+    background-color: var(--cor04);
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
+}
+
+#submit:hover{
+    background-color: var(--cor05);
+    transform: scale(1.2);
+}
