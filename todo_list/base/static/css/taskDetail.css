@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+:root{
+    --cor01: #7A8CBF;
+    --cor02: #B6D0F2;
+    --cor03: #7EBCF2;
+    --cor04: #79F2AE;
+    --cor05: #65BF85;
+    --cor06: #F2E857;
+    --cor07: #F2C84B;
+    --cor08: #F26457;
+    --cor09: #0D0D0D;
+    --corFundo: #d5dfe7;
+    --fontTask: 'Nunito', sans-serif;
+    --fontMain: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--corFundo);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--fontMain);
+    flex-basis: 1;
+}
+
+
+header{
+    background-color: var(--cor01);
+    padding: 5px 50px;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 2rem;
+}
+
+header a{
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: var(--cor04);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    cursor: pointer;
+    transition: 1s;    
+    color: var(--cor09);
+    text-decoration: none;
+}
+
+header a:hover{
+    transform: scale(1.2);
+    background-color: var(--cor05);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.task-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--cor02);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.303);
+    padding: 20px;
+}
+
+.task-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--corFundo);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.303);
+    transition: 1s;
+}
+
+.task-container div p{
+    font-family: var(--fontTask);
+}
+
+.task-container div:hover{
+    transform: scale(1.4);
+}
+
+

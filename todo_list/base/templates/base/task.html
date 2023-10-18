@@ -1,1 +1,22 @@
-<h1>Tarefa: {{task.title}}</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/taskDetail.css' %}">
+
+<body>
+    <header>
+        <h1>My To Do List</h1>
+        <a href="{% url 'tasks'%}">Back</a>
+    </header>
+    <main>
+        <div class="task-container">
+            <div>
+                <h2>Task</h2>
+                <p>{{task.title}}</p></p>
+            </div>
+            <div>
+                <h2>Description</h2>
+                <p>{{task.description}}</p>
+            </div>
+            <p>last modified at:{{task.create_at}}</p>
+        </div>
+    </main>
+</body>
