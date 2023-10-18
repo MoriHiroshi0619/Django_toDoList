@@ -75,6 +75,7 @@ main{
 }
 
 .task-container{
+    max-width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,6 +88,7 @@ main{
 }
 
 .task-container div{
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,6 +103,7 @@ main{
 
 .task-container div p{
     font-family: var(--fontTask);
+    text-wrap: wrap;
 }
 
 .task-container div:hover{
