@@ -65,16 +65,12 @@ header label:hover{
     background-color: var(--cor05);
 }
 
-main *{
-    border: 1px solid green;
-}
 
 main{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    border: 1px solid red !important;
 }
 
 
