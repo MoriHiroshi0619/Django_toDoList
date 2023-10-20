@@ -31,7 +31,7 @@
             <ul class="tasks">
                 {% for task in tasks %}
                 <li class="task-item">
-                    <div>{{task.title}}</div>
+                    <div>{{task.title|safe}}</div>
                     <div class="task-buttons">
                         <div><a href="{%url 'task' task.id%}" id="view">View</a></div>
                         <div><a href="{%url 'task-update' task.id%}" id="edit">Edit</a></div>

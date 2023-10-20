@@ -161,6 +161,7 @@ a{
     gap: 15px;
     font-family: var(--fontTask);
     list-style: none;
+    padding: 20px 30px;
 }
 
 .task-item{
